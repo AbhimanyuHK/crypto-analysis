@@ -64,7 +64,7 @@ if st.button("Fetch Data"):
     st.success(f"✅ Data saved overridden in SQLite {DB_FILE} for {crypto_symbol}")
     st.dataframe(data.tail())
     st.line_chart(data.set_index("Date")["Close"])
-    data.set_index("Date")[["Close"]].to_csv(f"db/open_ai_{crypto_symbol}.csv")
+    # data.set_index("Date")[["Close"]].to_csv(f"db/open_ai_{crypto_symbol}.csv")
 
 if st.button("Fetch Data for All"):
 
