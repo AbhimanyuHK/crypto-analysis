@@ -1,0 +1,10 @@
+yfinance
+pandas
+prophet
+matplotlib
+streamlit
+scikit-learn
+numpy
+streamlit-flow-component
+tensorflow
+keras
