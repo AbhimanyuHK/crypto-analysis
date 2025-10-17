@@ -38,19 +38,19 @@ if st.button("Fetch Data"):
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
 
-    # # Create table if not exists
-    # cursor.execute("""
-    #     CREATE TABLE IF NOT EXISTS crypto_prices (
-    #         Date TEXT,
-    #         Open REAL,
-    #         High REAL,
-    #         Low REAL,
-    #         Close REAL,
-    #         Adj_Close REAL,
-    #         Volume REAL,
-    #         Coin TEXT
-    #     )
-    # """)
+    # Create table if not exists
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS crypto_prices (
+            Date TEXT,
+            Open REAL,
+            High REAL,
+            Low REAL,
+            Close REAL,
+            Adj_Close REAL,
+            Volume REAL,
+            Coin TEXT
+        )
+    """)
 
     # Delete existing rows for this coin
     cursor.execute("DELETE FROM crypto_prices WHERE Coin = ?", (crypto_symbol,))
